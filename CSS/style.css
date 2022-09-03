@@ -1,5 +1,4 @@
 /* basic parameters */
-
 :root {
   /* font */
   --main-font: 'Roboto', sans-serif;
@@ -15,12 +14,14 @@
   --bgr-secondary-cl: #2f303a;
   --bgr-accent-cl: #f5f4fa;
   --portfolio-card-cl: #eeeeee;
+  --icon-mine-cl: #afb1b8;
+  --icon-secondary-cl: rgba(255, 255, 255, 0.1);
   /* portfolio grid parameters */
   --items: 3;
   --indent: 30px;
 }
 
-/* enable default link/list options */
+/* reset options */
 h1,
 h2,
 h3,
@@ -43,12 +44,17 @@ img {
   text-decoration: none;
 }
 
+.social-items {
+  text-decoration: none;
+}
+
 .footer-link:current,
 .menu-link:current {
   color: var(--accent-cl);
 }
 
-.list {
+.list,
+.clients-list {
   list-style: none;
 }
 
@@ -150,6 +156,17 @@ nav {
   margin-right: 50px;
 }
 
+.menu-link-icon {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.menu-link-icon:hover,
+.menu-link-icon:focus {
+  fill: currentColor;
+}
+
 .auth-nav,
 .menu-link {
   font-weight: 500;
@@ -168,8 +185,13 @@ nav {
 /* mine */
 
 .hero-section {
+  max-width: 1600px;
+  margin: 0 auto;
   background-color: #2f303a;
   padding: 200px 0;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(/images/optim_img/background-hero-Img.jpg);
 }
 
 .hero-title {
@@ -252,6 +274,20 @@ nav {
 }
 
 /* features section */
+.features-icon-item {
+  width: 270px;
+  height: 120px;
+  background-color: var(--bgr-accent-cl);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.features-icons-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .section-features {
   padding-top: 94px;
 }
@@ -312,13 +348,43 @@ nav {
 }
 
 .command-text-box {
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 16px;
 }
+
 .command-text {
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.social-icon-list {
+  display: flex;
+  gap: 10px;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  background-color: var(--bgr-mine-cl);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-cl);
+}
+
+.social-icon {
+  fill: var(--icon-mine-cl);
+}
+.social-items:hover .social-icon,
+.social-items:focus .social-icon {
+  fill: var(--bgr-mine-cl);
 }
 
 /* page portfolio */
@@ -330,6 +396,7 @@ nav {
   padding: 20px 24px;
   border: 1px solid var(--portfolio-card-cl);
 }
+
 .portfolio-title {
   color: var(--secondary-txt-cl);
   font-weight: 700;
@@ -357,16 +424,74 @@ nav {
   letter-spacing: 0.03em;
 }
 
+.portfolio-list:hover,
+.portfolio-list:focus {
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-item {
+  text-decoration: none;
+  color: currentColor;
+}
+
 .portfolio-text {
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
 }
 
+/* clients section */
+.clients-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.clients-items {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-mine-cl);
+  border-radius: 4px;
+}
+
+.clients-icon {
+  fill: var(--icon-mine-cl);
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-icon:hover,
+.clients-icon:focus {
+  fill: var(--accent-cl);
+  cursor: pointer;
+}
+
+.clients-items:hover,
+.clients-items:hover {
+  border: 1px solid var(--accent-cl);
+  cursor: pointer;
+}
+
 /* footer*/
+address {
+  display: flex;
+  align-items: baseline;
+}
+
 .page-footer {
   padding: 60px 0;
   background-color: var(--bgr-secondary-cl);
+}
+
+.footer-box {
+  display: flex;
+  align-items: baseline;
 }
 
 .logo-page-footer {
@@ -375,6 +500,10 @@ nav {
 
 .logo-footer {
   color: var(--white-txt-cl);
+}
+
+.addr-list {
+  margin-right: 70px;
 }
 
 .addr-item {
@@ -397,4 +526,33 @@ a[href="https://goo.gl/maps/suJbWfzHYKnnb4QdA"]
 .addr-item .footer-link:hover,
 .addr-item .footer-link:focus {
   color: var(--accent-cl);
+}
+
+.title-footer {
+  display: block;
+  color: var(--bgr-mine-cl);
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.social-link-footer {
+  width: 44px;
+  height: 44px;
+  background-color: var(--icon-secondary-cl);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-link-footer:hover,
+.social-link-footer:focus {
+  background-color: var(--accent-cl);
+}
+
+.social-icon-footer {
+  fill: var(--bgr-mine-cl);
 }
