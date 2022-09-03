@@ -156,6 +156,10 @@ nav {
   margin-right: 50px;
 }
 
+.auth-icon {
+  fill: currentColor;
+}
+
 .menu-link-icon {
   display: flex;
   gap: 10px;
