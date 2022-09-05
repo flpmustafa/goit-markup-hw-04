@@ -190,10 +190,12 @@ nav {
 
 .hero-section {
   max-width: 1600px;
+  height: 600px;
   margin: 0 auto;
   background-color: #2f303a;
   padding: 200px 0;
   background-repeat: no-repeat;
+  background-size: cover;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/optim_img/background-hero-Img.jpg');
 }
@@ -384,7 +386,7 @@ nav {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-cl);
-  color: var(--icon-mine-cl);
+  color: var(--bgr-mine-cl);
 }
 
 .social-icon {
@@ -543,6 +545,7 @@ a[href="https://goo.gl/maps/suJbWfzHYKnnb4QdA"]
   display: block;
   color: var(--bgr-mine-cl);
   font-weight: 700;
+  font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
